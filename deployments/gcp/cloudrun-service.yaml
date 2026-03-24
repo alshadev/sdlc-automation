@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: sdlc-automation-api
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/${PROJECT_ID}/sdlc-automation-api:latest
+          ports:
+            - containerPort: 8080
